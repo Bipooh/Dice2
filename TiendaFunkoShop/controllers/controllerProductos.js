@@ -10,7 +10,7 @@ const controllerProductos={
     },
     carrito:function(req, res){
         res.render('./products/cart')
-},
+    },
     indexCreateProduct:function(req,res){
         res.render('./products/createProduct')
     },
@@ -18,6 +18,7 @@ const controllerProductos={
         res.render('./products/editProduct')
     },
     createProduct:function(req,res){
+        return res.redirect("/");
         db.Products.create({
             name_product: req.body.nombreNewProduct,
             product_description:req.body.descripNewProduct,

@@ -3,19 +3,45 @@
     <%- include('.././partials/headIndexBarraLat')%>
     <body>
         <h1>Editar un Producto:</h1><br>
-        <form action="/editProduct" method="GET" id="createProduct">
-            <label for="idProductEdit">ID del Producto:</label>
-            <input type="text" name="idProductEdit"><br>
+        <form action="./<%=productoedit.id_product%>" method="POST" id="createProduct" enctype="multipart/form-data">
             <label for="nameProductEdit">Nombre del Producto:</label>
-            <input type="text" name="nameProductEdit"><br>
+            <input type="text" name="nameProductEdit" id="nameProduct" value="<%=productoedit.name_product%>"><br>
+            <!--MENSAJE DE ERROR-->
+            <div>
+                <small class="text-danger erNameP"></small>
+            </div>
             <label for="descripEditProduct">Descripción:</label>
-            <input type="text" name="descripEditProduct"><br>
+            <input type="text" name="descripEditProduct" id="descProduct" value="<%=productoedit.product_description%>"><br>
+            <!--MENSAJE DE ERROR-->
+            <div>
+                <small class="text-danger erDesc"></small>
+            </div>
             <label for="precioEditProduct">Precio:</label>
-            <input type="text" name="precioEditProduct"><br>
+            <input type="text" name="precioEditProduct" id="precioProduct" value="<%=productoedit.price%>"><br>
+            <!--MENSAJE DE ERROR-->
+            <div>
+                <small class="text-danger erPrecio"></small>
+            </div>
             <label for="categoryEditProduct">Categoría:</label>
-            <input type="text" name="categoryEditProduct"><br>
+            <select name="categoryNewProduct">
+                <option value="heroe">
+                    Héroes
+                </option>
+                <option value="movie">
+                    Peiculas
+                </option>
+                <option value="serie">
+                    Series
+                </option>
+                <option value="original">
+                    Originales
+                </option>
+            </select><br>
             <button type="submit" class="addcart" formmethod="POST">Editar Producto</button><br>
-            <button type="submit" class="addcart" formmethod="#">Eliminar Producto solor por ID(No funciona por ahora)</button>
+            
           </form>
+          <a href="/"><button>Inicio</button></a>
+          <script src="/js/front.js">
+          </script>
     </body>
 </html>

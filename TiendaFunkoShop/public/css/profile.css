@@ -462,6 +462,14 @@ padding: 0 12px;
 .cart-total a:hover{
 	background-color: #3C76B9;
 }
+.text-danger {
+    color: red;
+    margin: 10px;
+    font-size: 13px;
+}
+.is-invalid {
+    border: red solid 0.5px;
+}
 /**----------------TERMINA CARRITO--------------**/
 #createProduct{
     display: flex;

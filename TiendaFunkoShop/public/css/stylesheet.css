@@ -538,6 +538,12 @@ padding: 0 12px;
 .fa-bars{display: none;
 
 }
+/* Para el texto de validar en formulario */
+.text-danger {
+    color: red;
+    margin: 10px;
+    font-size: 13px;
+}
 .logovertical{
     visibility: visible;
     top: -29px;
