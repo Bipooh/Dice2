@@ -12,7 +12,7 @@ const authMiddleware = require("../middlewares/authMiddleware")
 // Metodo GET
 router.get('/login', guestMiddleware, userController.login);
 router.get('/register', guestMiddleware, userController.register);
-router.get('/profile',authMiddleware, userController.profile)
+router.get('/profile', userController.profile)
 router.get('/logout', userController.logout);
 
 // Metodo POST

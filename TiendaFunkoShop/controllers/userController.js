@@ -30,6 +30,7 @@ const userController = {
         
     // POST de login
     loginProcess: function (req,res){
+        return res.redirect("/");
         let errores = validationResult(req);
         if(errores.isEmpty()){
             // Comprobar si hay un email registrado
